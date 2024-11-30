@@ -1,0 +1,46 @@
+@media only screen and(max-width: 1061px){
+    .remaining_details{
+        gap: 100px;
+    }
+}
+
+@media only screen and (max-width: 492px){
+
+    .cityname_temp{
+        width: 299px;
+        height: 114px;
+    }
+
+    .input{
+        max-width: 184px;
+    }
+
+    .search_btn{
+        font-size: 11px;
+        padding: 7px 19px;
+    }
+
+    .minimum_temp{
+        width: 147px;
+        height: 81px;
+    }
+
+    .sp{
+        font-size: 20px;
+    }
+
+    .sp_temp{
+        font-size: 26px;
+    }
+}
+
+@media only screen and (max-width: 450px){
+    .remaining_details{
+        margin: 10px 10px 10px;
+    }
+
+    .minimum_temp {
+        width: 135px;
+        height: 76px;
+    }
+}

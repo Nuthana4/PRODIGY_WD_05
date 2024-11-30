@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="image/cloudy.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>Weather App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  </head>
+  <body>
+
+    
+
+    <div class="main_container">
+
+        <form class="search_input" role="search" data-aos="zoom-in"  data-aos-delay="300">
+            <input placeholder="cityName" type="search" name="text" class="input" id="city">
+            <button class="search_btn" type="submit" id="submit">Search</button>
+        </form>
+
+      <div class="details_container">
+
+        <div class="cityname_temp"   data-aos="zoom-in"  data-aos-delay="500">
+          <p><span id="cityName"></span></p>
+          <div class="tempLogo_temp">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="white" class="bi bi-thermometer-half" viewBox="0 0 16 16"  data-aos="zoom-in"  data-aos-delay="600">
+              <path d="M9.5 12.5a1.5 1.5 0 1 1-2-1.415V6.5a.5.5 0 0 1 1 0v4.585a1.5 1.5 0 0 1 1 1.415"/>
+              <path d="M5.5 2.5a2.5 2.5 0 0 1 5 0v7.55a3.5 3.5 0 1 1-5 0zM8 1a1.5 1.5 0 0 0-1.5 1.5v7.987l-.167.15a2.5 2.5 0 1 0 3.333 0l-.166-.15V2.5A1.5 1.5 0 0 0 8 1"/>
+            </svg>
+            <div class="sp sp_temp" style="color: white;"  data-aos="zoom-in"  data-aos-delay="600"><span id="temp"></span>°C</div>
+          </div>
+        </div>
+
+        <div class="remaining_details">
+
+          <div class="minimum_temp" >
+            <div style="color: white; display:flex; justify-content:center;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-arrow-down-short" viewBox="0 0 16 16"  style="margin: 7px 5px 0 0;">
+                <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4"/>
+              </svg>
+              <p style="margin: 5px 5px 0 0;">Min</p>
+            </div>
+
+            <div class="sp"  data-aos="zoom-in"  data-aos-delay="700"><span id="min_temp"></span>°C</div>
+          </div>
+          <div class="minimum_temp" >
+            <div style="color: white; display:flex; justify-content:center;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-arrow-up-short" viewBox="0 0 16 16"   style="margin: 7px 5px 0 0;">
+                <path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5"/>
+              </svg>
+              <p style="margin: 5px 5px 0 0;">Max</p>
+            </div>
+
+            <div class="sp"  data-aos="zoom-in"  data-aos-delay="700"><span id="max_temp"></span>°C</div>
+          </div>
+          <div class="minimum_temp" >
+            <div style="color: white; display:flex; justify-content:center;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-droplet-half" viewBox="0 0 16 16" style="margin: 8px 5px 0 0;">
+                <path fill-rule="evenodd" d="M7.21.8C7.69.295 8 0 8 0c.109.363.234.708.371 1.038.812 1.946 2.073 3.35 3.197 4.6C12.878 7.096 14 8.345 14 10a6 6 0 0 1-12 0C2 6.668 5.58 2.517 7.21.8zm.413 1.021A31.25 31.25 0 0 0 5.794 3.99c-.726.95-1.436 2.008-1.96 3.07C3.304 8.133 3 9.138 3 10c0 0 2.5 1.5 5 .5s5-.5 5-.5c0-1.201-.796-2.157-2.181-3.7l-.03-.032C9.75 5.11 8.5 3.72 7.623 1.82z"/>
+                <path fill-rule="evenodd" d="M4.553 7.776c.82-1.641 1.717-2.753 2.093-3.13l.708.708c-.29.29-1.128 1.311-1.907 2.87z"/>
+              </svg>
+              <p style="margin: 5px 5px 0 0;">Humidity</p>
+            </div>
+
+            <div class="sp"  data-aos="zoom-in"  data-aos-delay="700"><span id="humidity"></span>%</div>
+          </div>
+          <div class="minimum_temp" >
+            <div style="color: white; display:flex; justify-content:center;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-wind" viewBox="0 0 16 16" style="margin: 7px 5px 0 0;">
+                <path d="M12.5 2A2.5 2.5 0 0 0 10 4.5a.5.5 0 0 1-1 0A3.5 3.5 0 1 1 12.5 8H.5a.5.5 0 0 1 0-1h12a2.5 2.5 0 0 0 0-5m-7 1a1 1 0 0 0-1 1 .5.5 0 0 1-1 0 2 2 0 1 1 2 2h-5a.5.5 0 0 1 0-1h5a1 1 0 0 0 0-2M0 9.5A.5.5 0 0 1 .5 9h10.042a3 3 0 1 1-3 3 .5.5 0 0 1 1 0 2 2 0 1 0 2-2H.5a.5.5 0 0 1-.5-.5"/>
+              </svg>
+              <p style="margin: 5px 5px 0 0;">Wind-Speed</p>
+            </div>
+
+            <div class="sp"  data-aos="zoom-in"  data-aos-delay="700"><span id="wind_speed"></span>m/s</div>
+          </div>
+          <div class="minimum_temp" >
+            <div style="color: white; display:flex; justify-content:center;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-emoji-smile" viewBox="0 0 16 16"  style="margin: 7px 5px 0 0;">
+                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                <path d="M4.285 9.567a.5.5 0 0 1 .683.183A3.498 3.498 0 0 0 8 11.5a3.498 3.498 0 0 0 3.032-1.75.5.5 0 1 1 .866.5A4.498 4.498 0 0 1 8 12.5a4.498 4.498 0 0 1-3.898-2.25.5.5 0 0 1 .183-.683M7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5m4 0c0 .828-.448 1.5-1 1.5s-1-.672-1-1.5S9.448 5 10 5s1 .672 1 1.5"/>
+              </svg>
+              <p style="margin: 3px 5px 0 0;">Feels-Like</p>
+            </div>
+
+            <div class="sp"><span id="feels_like"></span>°C</div>
+          </div>
+
+
+        </div>
+
+
+        
+      </div>
+
+    </div>
+
+
+
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+      <script src="script.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    </body>
+</html>
